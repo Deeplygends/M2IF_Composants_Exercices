@@ -64,8 +64,8 @@ static int operation(int a, int b, std::string compo)
 int main(int argc, char ** argv)
 {
         if(argc != 4) exit(EXIT_FAILURE);
-	int data1 = argv[2];
-	int data2 = argv[3];
+	int data1 = (int)argv[2];
+	int data2 = (int)argv[3];
 
 	int valeur=0;
         std::cout << argc << " " << argv[1];
