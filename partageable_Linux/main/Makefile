@@ -21,6 +21,7 @@ ${COMPONENTS_FILES}:
 	done
 
 clean:
+	COMPONENTS_NEEDED="Composant1 Composant2"
 	rm -f ${OBJS} ${EXE} ${COMPONENTS_FILES}; \
 	for component in ${COMPONENTS_NEEDED}; do \
                 cd ../$$component; \
