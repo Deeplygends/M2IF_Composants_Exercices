@@ -2,7 +2,9 @@
 
 12 Mars 2020
 
-Rendu de partageable_Linux => Contient les fichiers sources pour le bonus
+Rendu de partageable_Linux => 
+
+	Contient les fichiers sources pour le bonus
 								- Ne pas linker les librairies explicitement
 								- Récupération du composant a utilisé en ligne de commande
 								- utilisation de dlopen et dlsym
