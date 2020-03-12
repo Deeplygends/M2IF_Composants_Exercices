@@ -68,7 +68,7 @@ static int function2(int a, int b, std::string compo)
 
                 // Exécution de la fonction "func"
                 t = func(a,b);
-                std::cout << std::endl << " value return " << t << std::endl
+                std::cout << std::endl << " value return " << t << std::endl;
         }
         else
         {
@@ -84,7 +84,7 @@ static int function2(int a, int b, std::string compo)
 
                 // Exécution de la fonction "func"
                 t = func(a,b);  
-                std::cout << std::endl << " value return " << t << std::endl
+                std::cout << std::endl << " value return " << t << std::endl;
         }
         // Fermeture de la bibliothèque
         dlclose(handle);
