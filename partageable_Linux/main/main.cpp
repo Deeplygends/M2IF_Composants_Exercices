@@ -69,7 +69,7 @@ int main(int argc, char ** argv)
 
 	int valeur=0;
         std::cout << argc << " " << argv[1];
-        if(argc == 2)
+        if(argc == 4)
         {
                 std::string arg1(argv[1]);
                 std::cout << std::endl << "In the loop " << arg1;
