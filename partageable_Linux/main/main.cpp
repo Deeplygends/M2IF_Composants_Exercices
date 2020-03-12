@@ -41,7 +41,7 @@ static int function2(int a, int b, std::string compo)
         int t = 0;
         void *handle;
         
-        std::cout << endl << "Loading Handler";
+        std::cout << std::endl << "Loading Handler";
         // Ouverture de la bibliothèque
         if(compo == "Composant2")
                 handle = dlopen("./libComposant2.so", RTLD_LAZY);
@@ -57,7 +57,7 @@ static int function2(int a, int b, std::string compo)
         if(compo == "Composant2")
         {
                 *(void **) (&func) = dlsym(handle, "composant2");
-                 std::cout << endl << "Call function composant2";
+                 std::cout << std::endl << "Call function composant2";
                 if (func == NULL)
                 {
                         printf("Error occured");
@@ -68,12 +68,12 @@ static int function2(int a, int b, std::string compo)
 
                 // Exécution de la fonction "func"
                 t = func(a,b);
-                std::cout << endl << " value return " << t << endl
+                std::cout << std::endl << " value return " << t << std::endl
         }
         else
         {
               *(void **) (&func) = dlsym(handle, "composant1");
-                std::cout << endl << "Call function composant1";
+                std::cout << std::endl << "Call function composant1";
                 if (func == NULL)
                 {
                         printf("Error occured");
@@ -84,7 +84,7 @@ static int function2(int a, int b, std::string compo)
 
                 // Exécution de la fonction "func"
                 t = func(a,b);  
-                std::cout << endl << " value return " << t << endl
+                std::cout << std::endl << " value return " << t << std::endl
         }
         // Fermeture de la bibliothèque
         dlclose(handle);
@@ -100,15 +100,15 @@ int main(int argc, char ** argv)
         std::cout << argc << " " << argv[1];
         if(argc == 2)
         {
-                std::cout << endl << "In the loop";
+                std::cout << std::endl << "In the loop";
                 if(argv[1] == "Composant1")
                 {
-                        std::cout << endl << "into component 1";
+                        std::cout << std::endl << "into component 1";
                         valeur = function2(data1, data2, argv[1]);
                 }
                 else if(argv[1] == "Composant2")
                 {
-                        std::cout << endl << "into component 2";
+                        std::cout << std::endl << "into component 2";
                         valeur = function2(data1, data2, argv[1]);
                 }
         }
