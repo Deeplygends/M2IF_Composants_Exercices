@@ -6,8 +6,8 @@ test: install
 	LD_LIBRARY_PATH=. ./main
 
 install:
-	ifdef COMPONENT
-		cd main && ${MAKE} install COMPONENT
+	ifdef PARAM
+		cd main && ${MAKE} install COMPONENT=PARAM
 	else
 		cd main && ${MAKE} install COMPONENT=NaiveHashComponent
 
