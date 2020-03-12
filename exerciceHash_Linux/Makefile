@@ -12,4 +12,4 @@ install:
 		cd main && ${MAKE} install COMPONENT=NaiveHashComponent
 	endif
 clean:
-	cd main && ${MAKE} clean
+	cd main && ${MAKE} clean COMPONENT="NaiveHashComponent sha3Component sha256Component"
