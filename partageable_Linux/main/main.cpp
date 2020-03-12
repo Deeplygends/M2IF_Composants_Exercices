@@ -13,7 +13,7 @@ static int operation(int a, int b, std::string compo)
         
         std::cout << std::endl << "Loading Handler";
         // Ouverture de la bibliothèque
-        if(compo == "Composant2")
+        if(compo.compare("Composant2")==0)
                 handle = dlopen("./libComposant2.so", RTLD_LAZY);
         else
                  handle = dlopen("./libComposant1.so", RTLD_LAZY);

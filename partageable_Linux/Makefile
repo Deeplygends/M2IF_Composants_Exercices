@@ -1,17 +1,14 @@
-ifdef PARAM
-	OPERATION=${PARAM}
-else
-	OPERATION="Composant1"
-endif
+
 all: test
 
 test: install
 	cd bin; \
-	LD_LIBRARY_PATH=. \
-	./main ${OPERATION}
+	LD_LIBRARY_PATH=.; \
+	./main "Composant1"; \
+	./main "Composant2";
 
 install:
-	cd main && ${MAKE} install PARAM=${OPERATION}
+	cd main && ${MAKE} install
 
 clean:
 	cd main && ${MAKE} clean
