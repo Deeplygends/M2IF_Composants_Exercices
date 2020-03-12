@@ -6,7 +6,10 @@ test: install
 	LD_LIBRARY_PATH=. ./main
 
 install:
-	cd main && ${MAKE} install
+	ifdef COMPONENT
+		cd main && ${MAKE} install COMPONENT
+	else
+		cd main && ${MAKE} install COMPONENT=NaiveHashComponent
 
 clean:
 	cd main && ${MAKE} clean
