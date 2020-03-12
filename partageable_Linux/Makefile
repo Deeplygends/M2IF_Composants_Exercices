@@ -7,7 +7,8 @@ all: test
 
 test: install
 	cd bin; \
-	LD_LIBRARY_PATH=. ./main ${OPERATION}
+	LD_LIBRARY_PATH=. \
+	./main ${OPERATION}
 
 install:
 	cd main && ${MAKE} install PARAM=${OPERATION}
