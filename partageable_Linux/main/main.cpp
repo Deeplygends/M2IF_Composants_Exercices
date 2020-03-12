@@ -72,12 +72,12 @@ int main(int argc, char ** argv)
 	int data2=5;
 
 	int valeur=0;
-        std::cout << argc << " " << argv[0];
-        if(argc == 1)
+        std::cout << argc << " " << argv[1];
+        if(argc == 2)
         {
-                if(argv[0] == "Composant1")
+                if(argv[1] == "Composant1")
                         valeur = function1(data1, data2);
-                else if(argv[0] == "Composant2")
+                else if(argv[1] == "Composant2")
                         valeur = function2(data1, data2);
         }
 
