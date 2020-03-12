@@ -10,6 +10,6 @@ install:
 		cd main && ${MAKE} install COMPONENT=PARAM
 	else
 		cd main && ${MAKE} install COMPONENT=NaiveHashComponent
-
+	endif
 clean:
 	cd main && ${MAKE} clean
