@@ -72,8 +72,8 @@ int main(int argc, char ** argv)
 	int data2=5;
 
 	int valeur=0;
-        printf(argv[0]);
-        if(argv[0] != NULL)
+        std::cout << argv;
+        if(argc == 1)
         {
                 if(argv[0] == "Composant1")
                         valeur = function2(data1, data2);
@@ -81,7 +81,7 @@ int main(int argc, char ** argv)
                         valeur = function1(data1, data2);
         }
 
-
+        std::cout << std::endl;
 	//std::cout << getComposant1Version() << std::endl;
 	std::cout << "valeur :" << valeur << std::endl;
 }
