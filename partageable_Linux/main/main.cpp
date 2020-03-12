@@ -71,7 +71,7 @@ int main(int argc, char ** argv)
         std::cout << argc << " " << argv[1];
         if(argc == 4)
         {
-                //std::string arg1(argv[1]);
+                std::string arg1(argv[1]);
                 //std::cout << std::endl << "In the loop " << arg1;
                 if(arg1.compare("Composant1") == 0)
                 {
