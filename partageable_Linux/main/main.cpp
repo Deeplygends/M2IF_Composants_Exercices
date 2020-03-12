@@ -72,8 +72,8 @@ int main(int argc, char ** argv)
 	int data2=5;
 
 	int valeur=0;
-        printf(argv[0]);
-        if(argv[0] != null)
+        print(argv[0]);
+        if(argv[0] != NULL)
         {
                 if(argv[0] == "Composant1")
                         valeur = function2(data1, data2);
