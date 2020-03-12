@@ -2,7 +2,7 @@
 #include <iostream>
 #include <dlfcn.h>
 #include <stdio.h>
-#include "string.h"
+#include <string>
 
 
 static int operation(int a, int b, std::string compo)
@@ -24,7 +24,7 @@ static int operation(int a, int b, std::string compo)
         }
 
         // Chargement de la fonction "func"
-        if(compo == "Composant2")
+        if(compo.compare("Composant2") == 0)
         {
                 *(void **) (&func) = dlsym(handle, "composant2");
                  std::cout << std::endl << "Call function composant2";
@@ -72,12 +72,12 @@ int main(int argc, char ** argv)
         {
                 std::string arg1(argv[1]);
                 std::cout << std::endl << "In the loop " << arg1;
-                if(argv[1] == "Composant1")
+                if(arg1.compare("Composant1") == 0)
                 {
                         std::cout << std::endl << "into component 1";
                         valeur = operation(data1, data2, arg1);
                 }
-                else if(argv[1] == "Composant2")
+                else if(arg1.compare("Composant2") == 0)
                 {
                         std::cout << std::endl << "into component 2";
                         valeur = operation(data1, data2, arg1);
